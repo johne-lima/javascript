@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Troco</title>
+    <style>
+        button {
+            font-weight: bolder;
+            text-transform: uppercase;
+            height: 65px;
+            width: 150px;
+            background-image: linear-gradient(90deg, rgb(200, 252, 200), rgb(238, 168, 168));
+            border-radius: 10px;
+            box-shadow: 3px 2px 2px rgba(137, 43, 226, 0.459);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o Troco</h1>
+    <button type="button" onclick="clique()">Comprar produto</button>
+
+    <script>
+        function clique() {
+            let produto = prompt('Qual produto você está comprando?')
+            let preco = prompt(`Quanto custa ${produto} que você está comprando?`)
+            let valorDado = prompt(`Qual foi o valor que você deu para pagar o ${produto}?`)
+            let troco = valorDado - preco
+            preco = Number(preco)
+            valorDado = Number(valorDado)
+            troco = Number(troco)
+
+            if (valorDado < preco) {
+                alert(`Você nao pode comprar ${produto} pois não ha dinheiro suficiente`)
+            } else {
+                alert(`Você comprou um ${produto} que custou ${preco.toLocaleString('pt-br', {style: 'currency', currency:'BRL'})}.
+Deu ${valorDado.toLocaleString('pt-br', {style: 'currency', currency:'BRL'})} em dinheiro e vai receber ${troco.toLocaleString('pt-br', {style: 'currency', currency:'BRL'})} de troco.
+Volte Sempre!`)
+            }
+        }
+    </script>
+
+</body>
+</html>
