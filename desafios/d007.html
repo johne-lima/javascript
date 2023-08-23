@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor R$ -> US$</title>
+    <style>
+        button {
+            font-weight: bolder;
+            text-transform: uppercase;
+            height: 65px;
+            width: 150px;
+            background-image: linear-gradient(90deg, rgb(200, 252, 200), rgb(238, 168, 168));
+            border-radius: 10px;
+            box-shadow: 3px 2px 2px rgba(137, 43, 226, 0.459);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor R$ ➡️ US$</h1>
+    <button type="button" onclick="clique()">Converter</button>
+    <p>⬆️ Clique no botão acima para iniciar. ⬆️</p>
+
+    <script>
+        const dol = Number(prompt('Antes de mais nada. Quanto está a cotação atual do dólar agora?'))
+        function clique() {
+            const cart = Number(prompt('Quantos R$ você tem na carteira? '))
+            const m =  cart / dol
+            if (cart < dol) {
+                alert('Seu dinheiro não é suficiente para comprar dólares')
+            } else {
+                alert(`Com ${cart} reais, você vai conseguir comprar ${m.toFixed(2)} dólares.`)
+            }
+        }   
+    </script>
+</body>
+</html>
