@@ -6,21 +6,17 @@
     <title>Conversor de temperaturas</title>
     <style>
         button {
-            font-weight: bolder;
-            text-transform: uppercase;
-            height: 65px;
-            width: 150px;
-            background-image: linear-gradient(90deg, rgb(200, 252, 200), rgb(238, 168, 168));
-            border-radius: 10px;
-            box-shadow: 3px 2px 2px rgba(137, 43, 226, 0.459);
-            cursor: pointer;
+            height: 60px;
+            width: 100px;
         }
     </style>
 </head>
 <body>
     <h1>Conversor de temperaturas</h1>
     <button type="button" onclick="clicar()">Converter</button>
-    <p id="result"></p>
+    <div id="result"></div>
+
+
     <script>
         const resultado = document.getElementById('result')
         function clicar() {
