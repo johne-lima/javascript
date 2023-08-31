@@ -21,17 +21,21 @@
         const result = document.querySelector('div#result')
 
         function clicar(){
+            result.innerHTML = ''
+
             let produto = prompt('Qual é o produto que você está comprando?')
-            let preco = prompt(`Qual é o preço de ${produto}?`)
-            
-            let desconto = 10 * preco
+
+            let preco = Number(prompt(`Qual é o preço de ${produto}?`))
+            let desconto = Number(10 * preco)
+
             desconto /= 100
-            let aPagar = preco - desconto  
+            let aPagar = Number(preco - desconto)
+            
             
             result.innerHTML += `<h2>Calculando desconto de 10% para ${produto}</h2>`
-            result.innerHTML += `<p>O preço original era ${preco}.</p>`
-            result.innerHTML += `<p>Você acaba de ganhar ${desconto} (10%).</p>`
-            result.innerHTML += `<p>No fim você vai pagar ${aPagar} no produto ${produto}.`
+            result.innerHTML += `<p>O preço original era ${preco.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}.</p>`
+            result.innerHTML += `<p>Você acaba de ganhar ${desconto.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})} (10%).</p>`
+            result.innerHTML += `<p>No fim você vai pagar ${aPagar.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})} no produto ${produto}.`
         }
     </script>
 </body>
