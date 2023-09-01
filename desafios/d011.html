@@ -9,8 +9,15 @@
             height: 50px;
             width: 160px;
         }
-        div {
-            display: inline-block'
+        #green {
+            background-color: rgba(120, 211, 120, 0.705);
+            width: 150px;
+            font-weight: bold;
+        }
+        #red {
+            background-color: rgba(211, 120, 120, 0.705);
+            width: 150px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -32,9 +39,9 @@
             res.innerHTML = `<h2>Analisando o ano de ${ano}...</h2>`
 
             if (ano % 4 == 0 || ano / 400 == 0) {
-                res.innerHTML =`<p>O ano de ${ano}</p>`
+                res.innerHTML =`<p>O ano de ${ano} <span id="green">É BISSEXTO ✅</span</p>`
             } else {
-                res.innerHTML =`<p>O ano de ${ano} NÃO É BISSEXTO</p>`
+                res.innerHTML =`<p>O ano de ${ano} <span id="red">NÃO É BISSEXTO ❌</span></p>`
             }
         }
     </script>
