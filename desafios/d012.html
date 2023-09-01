@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço Mudou</title>
+</head>
+<body>
+    <h1>Preço mudou</h1>
+    <button onclick="clicar()">Verificar</button>
+    <div id="result">
+        <p>Clique no botão acima para analisar a mudança de preço.</p>
+    </div>
+
+    <script>
+        var res = document.querySelector('div#result')
+        
+
+        function clicar() {
+            res.innerHTML = ''
+            var pEra = Number(prompt("Qual era o preço do produto?"))
+            var pAtual = Number(prompt("Qual é o preço atual do produto?"))
+
+            res.innerHTML += `<h2>Analisando os valores informados</h2>`
+            res.innerHTML += `<p>O produto custava ${pEra.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} e agora custa ${pAtual.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</p>`
+
+            if(pEra < pAtual) {
+                res.innerHTML += `<p>Hoje o produto está mais caro.</p>`
+                let pSubiu = Number(pAtual - pEra)
+                res.innerHTML += `O preço subiu ${pSubiu.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em relação ao preço anterior.`
+                
+            }else {
+                res.innerHTML += `<p>Hoje o produto está mais barato.</p>`
+                let pCaiu = Number(pEra - pAtual)
+                res.innerHTML += `O preço caiu ${pCaiu.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em relação ao preço anterior.`
+            }
+
+        }
+    </script>
+</body>
+</html>
