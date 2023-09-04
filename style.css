@@ -1,0 +1,90 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+header {
+    border-radius: 15px 15px 0px 0px;
+    text-align: center;
+    padding: 2px;
+    background-color: rgb(107, 106, 106);
+    width: 51%;
+    margin: auto;
+    color: white;
+}
+
+header > h1 {
+    color: #efd81d;
+    text-shadow: 1px 1px 5px black;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header a:hover {
+    text-decoration: underline;
+    color: #efd81d;
+}
+
+main {
+    border-radius: 0px 0px 15px 15px;
+    text-align: center;
+    padding: 8px;
+    background-color: white;
+    width: 50%;
+    margin: auto;
+}
+
+main > .desafioT {
+    text-transform: uppercase;
+
+}
+
+main > .desafio {
+    background-color: rgba(22, 22, 22, 0.486);
+    margin: auto;
+    border-radius: 15px;
+    width: 80%;
+}
+
+main > ul > li {
+    list-style-type: none;
+    padding: 7px ;
+    margin: 6px;
+    text-transform: uppercase;
+}
+
+main > ul a {
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.459);
+}
+
+main > ul a:hover{
+    text-decoration: underline;
+    color: #efd81d;
+}
+
+footer {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    background-color: rgb(107, 106, 106);
+    width: 52%;
+    margin: auto;
+    border-radius: 15px;
+    position: sticky;
+    bottom: 3px;
+}
+
+footer:hover {
+    color: rgb(38, 221, 38);
+}
